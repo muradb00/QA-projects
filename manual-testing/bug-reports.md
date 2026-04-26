@@ -129,3 +129,39 @@ After a successful signup attempt, the signup form retains previously entered us
 * Poor user experience (form not reset)
 * Potential privacy concern if multiple users use the same device
 
+---
+
+##  Bug 5: Product storage capacity mismatch between title and description
+
+**ID:** BUG-005
+**Severity:** High
+**Priority:** High
+
+### Description
+
+The product title indicates a different storage capacity than the product description, leading to inconsistent and misleading information.
+
+### Steps to Reproduce
+
+1. Open the website
+2. Navigate to product: **"iPhone 6 32GB"**
+3. Open the product detail page
+4. Compare product title and description
+
+### Expected Result
+
+Product description should match the product title, indicating **32GB storage**.
+
+### Actual Result
+
+* Product title shows: **32GB**
+* Product description states: **16GB internal storage**
+
+### Impact
+
+* Misleads users about product specifications
+* Can lead to incorrect purchase decisions
+* Reduces trust in product data accuracy
+* Potential business and credibility impact
+
+
