@@ -164,4 +164,42 @@ Product description should match the product title, indicating **32GB storage**.
 * Reduces trust in product data accuracy
 * Potential business and credibility impact
 
+---
+
+##  Bug 6: Invalid credit card number format is accepted during purchase
+
+**ID:** BUG-006
+**Severity:** High
+**Priority:** High
+
+### Description
+
+The system accepts an invalid credit card number format during purchase, allowing the transaction to proceed with incorrect payment data.
+
+### Steps to Reproduce
+
+1. Add any item to the cart (optional: can also proceed without items)
+2. Navigate to "Cart"
+3. Click "Place Order"
+4. Enter valid data in required fields (e.g. Name, Country)
+5. Enter credit card number: `1111`
+6. Click "Purchase"
+
+### Expected Result
+
+* System should validate credit card format
+* Invalid card numbers (e.g. too short or incorrect format) should be rejected
+* Error message should be displayed
+
+### Actual Result
+
+* System accepts invalid credit card number (`1111`)
+* Purchase is completed successfully
+
+### Impact
+
+* Allows invalid payment data
+* Indicates weak input validation
+* Potential financial and data integrity risks
+* No length or format validation (e.g. Luhn check) is applied
 
